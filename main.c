@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "read_file.h"
+#include "prototypes.h"
 
 char config[100];
 
