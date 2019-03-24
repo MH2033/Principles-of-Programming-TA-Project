@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int welcome_screen(void)
 {
 	int mode;
