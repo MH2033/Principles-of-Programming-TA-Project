@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 extern int x, y, time, dots;
-extern int obstac[100];
+extern int obstac[100][100];
 
 void load_config(const char config[]) {
-    int i, j = 0, lcount = 0;
+    int i, j = 0, lcount = 0, tempx = 0, tempy = 0;
     x = 0;
     y = 0;
     time = 0;
@@ -39,6 +39,24 @@ void load_config(const char config[]) {
                 i++;
             }
             i--;
+        }
+        else {
+            while(config[i] != '\0') {
+                tempx = 0;
+                tempy = 0;
+                while(config[i] != ' ') {
+                    tempx = tempx * 10 + (config[i] - '0');
+                    i++;
+                }
+                i++;
+                while (config[i] != '\n' && config[i] != '\0') {
+                    tempy = tempy * 10 + (config[i] - '0');
+                    i++;
+                }
+                i++;
+                obstac[tempx][tempy] = 1;
+            }
+            break;
         }
 
     }
