@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include "prototypes.h"
+#define LEN 200
 int x, y, time, dots;
-int obstac[100][100] = {0};
+int obstac[LEN][LEN] = {0};
 int main() {
     int ans;
-    int rand[100][100] = {0};
-    char config[100],game_map[101][101];
+    int rand[LEN][LEN] = {0};
+    char config[LEN],game_map[LEN][LEN];
     read_from_file(config, "test_case_1.txt");
     load_config(config);
     ans = welcome_screen();
