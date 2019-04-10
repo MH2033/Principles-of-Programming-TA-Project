@@ -12,6 +12,7 @@ int main() {
     read_from_file(config, "test_case_1.txt");
     load_config(config);
     ans = welcome_screen();
+    hidecursor();
     if(ans)
         mode_1();
     else
