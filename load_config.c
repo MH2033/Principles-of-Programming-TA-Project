@@ -1,7 +1,7 @@
 #include <stdio.h>
 #define LEN 100
 extern int x, y, dots;
-extern int obstac[LEN][LEN];
+extern int game[LEN][LEN];
 extern double times;
 void load_config(const char config[]) {
     int i, j = 0, lcount = 0, tempx = 0, tempy = 0;
@@ -54,7 +54,7 @@ void load_config(const char config[]) {
                     i++;
                 }
                 i++;
-                obstac[tempx][tempy] = 1;
+                game[tempx][tempy] = 2;
             }
             break;
         }

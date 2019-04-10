@@ -1,29 +1,35 @@
 #include <stdio.h>
 #define LEN 100
-extern int obstac[LEN][LEN],dot[LEN][LEN],X[LEN][LEN],Y[LEN][LEN],x_p_x,x_p_y,y_p_y,y_p_x,x,y;
+extern int x_p_x,x_p_y,o_p_y,o_p_x,x,y;
 extern char game_map[LEN][LEN];
-extern int bigdot[LEN][LEN];
+extern int y,x,game[LEN][LEN],TX[2],TY[2];
+
 void game_map_making(void){
-    int i,j;
+    int i,j,k = 0,g = 0;
     for (i = 0; i <= x; i++) {
         for (j = 0; j <= y; j++) {
-            if (dot[i][j] == 1) {
+            if (game[i][j] == 1) {
                 game_map[i][j] = '.';
-            }else if(X[i][j] == 1){
+            } else if (game[i][j] == 9) {
+                game_map[i][j] = '!';
+            } else if (game[i][j] == 2) {
+                game_map[i][j] = 'B';
+            } else if (game[i][j] == 4) {
+                game_map[i][j] = 'O';
+                o_p_x = i;
+                o_p_y = j;
+            } else if (game[i][j] == 3) {
                 game_map[i][j] = 'X';
                 x_p_x = i;
                 x_p_y = j;
-            }else if(Y[i][j] == 1){
-                game_map[i][j] = 'Y';
-                y_p_x = i;
-                y_p_y = j;
-            } else if (obstac[i][j] == 1) {
-                game_map[i][j] = 'B';
-            } else if(bigdot[i][j] == 1) {
+            } else if (game[i][j] == 5) {
                 game_map[i][j] = 'F';
-            }else if (i == 0 || j == 0 || i == x || j == y) {
-                game_map[i][j] = '!';
-            } else {
+            }else if(game[i][j] == 6){
+                game_map[i][j] = 'T';
+                TX[k] = i;
+                TY[g] = j;
+                g++;k++;
+            }else {
                 game_map[i][j] = ' ';
             }
         }
