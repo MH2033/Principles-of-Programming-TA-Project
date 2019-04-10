@@ -5,10 +5,10 @@
 #include <windows.h>
 #include "prototypes.h"
 #define LEN 100
-extern int dots,times,obstac[LEN][LEN],dot[LEN][LEN],X[LEN][LEN],Y[LEN][LEN],x,y,y_p_y,y_p_x,x_p_x,x_p_y,score1,score2;
+extern int dots,times,obstac[LEN][LEN],dot[LEN][LEN],X[LEN][LEN],Y[LEN][LEN],x,y,y_p_y,y_p_x,x_p_x,x_p_y,score[2],score1,score2;
 extern char game_map[LEN][LEN];
 void mode_1(void) {
-    int c = 0,move_x = 0,move_y,score[2] = {0};
+    int c = 0, move_x = 0, move_y;
     game_map_making();
     rand1(dots, dot);
     game_map_making();
@@ -19,48 +19,18 @@ void mode_1(void) {
     system("CLS");
     print_map();
     while (c != 'q') {
-        if(kbhit()) {
+        if (kbhit()) {
             c = getch();
-            if (c == 'w' || c== 'a'|| c == 's' || c == 'd') {
+            if (c == 'w' || c == 'a' || c == 's' || c == 'd') {
                 move_x = c;
                 continue;
             }
-            if (c == 'i' || c== 'k'|| c == 'l' || c == 'j'){
+            if (c == 'i' || c == 'k' || c == 'l' || c == 'j') {
                 move_y = c;
                 continue;
             }
         }
-        else if (move_x == 'w') {
-            move_up(x_p_x,x_p_y,X,score,0);
-            score1 = score[0];
-        }
-        else if (move_x == 's'){
-            move_down(x_p_x,x_p_y,X,score,0);
-            score1 = score[0];
-        }
-        else if (move_x == 'a'){
-            move_left(x_p_x,x_p_y,X,score,0);
-            score1 = score[0];
-        }
-        else if(move_x == 'd') {
-            move_right(x_p_x, x_p_y, X, score, 0);
-            score1 = score[0];
-        }
-        if (move_y == 'i') {
-            move_up(y_p_x,y_p_y,Y,score,1);
-            score2 = score[1];
-        }
-        else if (move_y == 'k'){
-            move_down(y_p_x,y_p_y,Y,score,1);
-            score2 = score[1];
-        }
-        else if (move_y == 'j'){
-            move_left(y_p_x,y_p_y,Y,score,1);
-            score2 = score[1];
-        }
-        else if(move_y == 'l'){
-            move_right(y_p_x,y_p_y,Y,score,1);
-            score2 = score[1];
-        }
+        movex(move_x);
+        movey(move_y);
     }
 }
