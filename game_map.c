@@ -1,5 +1,5 @@
 #include <stdio.h>
-int obstac[100][100],dot[100][100],X[100][100],Y[100][100],x,y;
+int obstac[100][100],dot[100][100],X[100][100],Y[100][100],x_p_x,x_p_y,x,y;
 char game_map[101][101];
 void game_map_making(void){
     int i,j;
@@ -9,6 +9,8 @@ void game_map_making(void){
                 game_map[i][j] = '.';
             }else if(X[i][j] == 1){
                 game_map[i][j] = 'X';
+                x_p_x = i;
+                x_p_y = j;
             }else if(Y[i][j] == 1){
                 game_map[i][j] = 'Y';
             } else if (obstac[i][j] == 1) {

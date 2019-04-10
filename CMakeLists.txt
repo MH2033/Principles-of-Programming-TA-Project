@@ -3,4 +3,4 @@ project(p_o_p_g_project C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(p_o_p_g_project main.c welcome_screen.c hidecursor.c read_file.o prototypes.h load_config.c delay.c  rand.c game_map.c mode_1.c mode_2.c print_map.c)
+add_executable(p_o_p_g_project main.c welcome_screen.c hidecursor.c read_file.o prototypes.h load_config.c delay.c  rand.c game_map.c mode_1.c mode_2.c print_map.c move.c)
