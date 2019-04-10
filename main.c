@@ -6,9 +6,9 @@
 int x, y, times, dots;
 int obstac[100][100] = {0},dot[100][100] = {0},X[100][100] = {0},Y[100][100] =  {0};
 char game_map[101][101];
+char config[100];
 int main() {
     int ans;
-    char config[100];
     read_from_file(config, "test_case_1.txt");
     load_config(config);
     ans = welcome_screen();

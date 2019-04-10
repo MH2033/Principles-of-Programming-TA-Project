@@ -2,7 +2,7 @@
 
 extern int x, y, times, dots;
 extern int obstac[100][100];
-
+char config[100];
 void load_config(const char config[]) {
     int i, j = 0, lcount = 0, tempx = 0, tempy = 0;
     x = 0;
