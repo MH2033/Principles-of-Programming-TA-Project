@@ -1,6 +1,7 @@
 #include <stdio.h>
-int x,y;
-char game_map[101][101];
+#define LEN 200
+extern int x,y;
+extern char game_map[LEN][LEN];
 extern int score1, score2;
 extern double times;
 void print_map(void){

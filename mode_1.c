@@ -6,7 +6,6 @@
 #include "prototypes.h"
 int dots,times,obstac[100][100],dot[100][100],X[100][100],Y[100][100],x,y;
 char game_map[101][101];
-extern int bigdot[100][100];
 void mode_1(void) {
     int c = 0, i = 0, j = 0, k, l, score1 = 0;
     game_map_making();
@@ -15,8 +14,6 @@ void mode_1(void) {
     rand1(1, X);
     game_map_making();
     rand1(1, Y);
-    game_map_making();
-    rand1(1, bigdot);
     game_map_making();
     while (c != 'q') {
         if(kbhit())
