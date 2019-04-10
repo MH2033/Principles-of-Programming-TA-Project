@@ -1,9 +1,9 @@
 #include <stdlib.h>
 #include "prototypes.h"
 #include <windows.h>
-#define LEN 200
-int dots,obstac[LEN][LEN],dot[LEN][LEN],X[LEN][LEN],Y[LEN][LEN],x,y,x_p_x,x_p_y;
-char game_map[LEN + 1][LEN + 1];
+#define LEN 100
+extern int dots,obstac[LEN][LEN],dot[LEN][LEN],X[LEN][LEN],Y[LEN][LEN],x,y,x_p_x,x_p_y;
+extern char game_map[LEN][LEN];
 extern int score1, score2;
 void move_up(void){
     if (X[x_p_x][x_p_y] == 1) {

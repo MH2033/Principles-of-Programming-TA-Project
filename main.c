@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include <time.h>
 #include "prototypes.h"
-#define LEN 200
-int x, y, dots, score1 = 0, score2 = 0;
+#define LEN 100
+int x, y, dots, score1 = 0,score2 = 0,x,y,x_p_x,x_p_y,y_p_y,y_p_x;
 int obstac[LEN][LEN] = {0},dot[LEN][LEN] = {0},X[LEN][LEN] = {0},Y[LEN][LEN] =  {0};
 double times;
 char game_map[101][101];

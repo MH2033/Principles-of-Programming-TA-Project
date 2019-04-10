@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#define LEN 200
+#define LEN 100
 extern int obstac[LEN][LEN],x,y;
 extern char game_map[LEN][LEN];
 void rand1(int n,int ran[][LEN]){

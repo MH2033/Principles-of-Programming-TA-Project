@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define LEN 200
+#define LEN 100
 extern int x, y, dots;
 extern int obstac[LEN][LEN];
 extern double times;

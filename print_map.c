@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define LEN 200
+#define LEN 100
 extern int x,y;
 extern char game_map[LEN][LEN];
 extern int score1, score2;

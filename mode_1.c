@@ -4,11 +4,11 @@
 #include <time.h>
 #include <windows.h>
 #include "prototypes.h"
-#define LEN 200
-int dots,times,obstac[LEN][LEN],dot[LEN][LEN],X[LEN][LEN],Y[LEN][LEN],x,y;
-char game_map[LEN + 1][LEN + 1];
+#define LEN 100
+extern int dots,times,obstac[LEN][LEN],dot[LEN][LEN],X[LEN][LEN],Y[LEN][LEN],x,y;
+extern char game_map[LEN][LEN];
 void mode_1(void) {
-    int c = 0, i = 0, j = 0, k, l, score1 = 0;
+    int c = 0;
     game_map_making();
     rand1(dots, dot);
     game_map_making();
@@ -16,6 +16,8 @@ void mode_1(void) {
     game_map_making();
     rand1(1, Y);
     game_map_making();
+    system("CLS");
+    print_map();
     while (c != 'q') {
         if(kbhit())
             c = getch();
