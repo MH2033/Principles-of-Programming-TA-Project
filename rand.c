@@ -2,8 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-int obstac[100][100],x,y;
-char game_map[101][101];
+#define LEN 200
+extern int obstac[LEN][LEN],x,y;
+extern char game_map[LEN][LEN];
 void rand1(int n,int ran[][100]){
     int count,counter1 = 0,ran_x,ran_y;
     srand(time(NULL));
