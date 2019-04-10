@@ -3,13 +3,14 @@
 #include <stdlib.h>
 #include <time.h>
 #include "prototypes.h"
+#define LEN 200
 int x, y, dots, score1 = 0, score2 = 0;
-int obstac[100][100] = {0},dot[100][100] = {0},X[100][100] = {0},Y[100][100] =  {0};
+int obstac[LEN][LEN] = {0},dot[LEN][LEN] = {0},X[LEN][LEN] = {0},Y[LEN][LEN] =  {0};
 double times;
 char game_map[101][101];
 int main() {
     int ans;
-    char config[100];
+    char config[LEN];
     read_from_file(config, "test_case_1.txt");
     load_config(config);
     ans = welcome_screen();

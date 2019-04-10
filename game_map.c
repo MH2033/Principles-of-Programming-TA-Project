@@ -1,6 +1,7 @@
 #include <stdio.h>
-int obstac[100][100],dot[100][100],X[100][100],Y[100][100],x_p_x,x_p_y,x,y;
-char game_map[101][101];
+#define LEN 200
+int obstac[LEN][LEN],dot[LEN][LEN],X[LEN][LEN],Y[LEN][LEN],x_p_x,x_p_y,x,y;
+char game_map[LEN + 1][LEN + 1];
 void game_map_making(void){
     int i,j;
     for (i = 0; i <= x; i++) {
