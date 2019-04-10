@@ -5,7 +5,7 @@
 #define LEN 200
 extern int obstac[LEN][LEN],x,y;
 extern char game_map[LEN][LEN];
-void rand1(int n,int ran[][100]){
+void rand1(int n,int ran[][LEN]){
     int count,counter1 = 0,ran_x,ran_y;
     srand(time(NULL));
     for(count = 0; count < n; count++) {

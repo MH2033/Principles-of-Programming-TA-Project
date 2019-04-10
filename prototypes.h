@@ -11,7 +11,7 @@ void delay(int x);
 int welcome_screen(void);
 void hidecursor(void);
 void game_map_making(void);
-void rand1(int n,int ran[][100]);//baray aval bazi k bayad rand ziadi bgirim
+void rand1(int n,int ran[][200]);//baray aval bazi k bayad rand ziadi bgirim
 void mode_1(void);
 void mode_2(void);
 void print_map(void);
