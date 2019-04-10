@@ -6,7 +6,7 @@
 #define P_O_P_G_PROJECT_PROTOTYPES_H
 
 void read_from_file(char file_data[], char file_name[]);
-void load_config(char config[]);
+void load_config(const char config[]);
 void delay(int );
 int welcome_screen(void);
 void game_map_making(void);

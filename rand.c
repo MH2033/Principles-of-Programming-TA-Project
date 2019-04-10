@@ -6,7 +6,7 @@ int obstac[100][100];
 char game_map[101][101];
 void rand1(int n,int ran[][100],int x,int y){
     int count,counter1 = 0,ran_x,ran_y;
-    //srand(time(NULL));
+    srand(time(NULL));
     for(count = 0; count < n; count++) {
         ran_x = rand() % x;
         ran_y = rand() % y;
