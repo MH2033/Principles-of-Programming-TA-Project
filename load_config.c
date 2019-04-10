@@ -1,7 +1,8 @@
 #include <stdio.h>
 
-extern int x, y, times, dots;
+extern int x, y, dots;
 extern int obstac[100][100];
+extern double times;
 
 void load_config(const char config[]) {
     int i, j = 0, lcount = 0, tempx = 0, tempy = 0;
