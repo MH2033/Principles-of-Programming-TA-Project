@@ -15,7 +15,7 @@ void mode_1(void) {
     game_map_making();
     rand1(1, Y);
     game_map_making();
-    while (1) {
+    while (c != 'q') {
         if(kbhit())
             c = getch();
         else if (c == 'w') {

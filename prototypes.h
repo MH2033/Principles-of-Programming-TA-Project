@@ -15,9 +15,9 @@ void rand1(int n,int ran[][100]);//baray aval bazi k bayad rand ziadi bgirim
 void mode_1(void);
 void mode_2(void);
 void print_map(void);
-int move_up(void);
-int move_down(void);
-int move_right(void);
-int move_left(void);
+void move_up(void);
+void move_down(void);
+void move_right(void);
+void move_left(void);
 
 #endif //P_O_P_G_PROJECT_PROTOTYPES_H

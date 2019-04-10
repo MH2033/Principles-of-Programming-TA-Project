@@ -3,8 +3,8 @@
 #include <windows.h>
 int dots,obstac[100][100],dot[100][100],X[100][100],Y[100][100],x,y,x_p_x,x_p_y;
 char game_map[101][101];
-int move_up(void){
-    int score1 = 0;
+extern int score1, score2;
+void move_up(void){
     if (X[x_p_x][x_p_y] == 1) {
         if (game_map[x_p_x - 1][x_p_y] == ' ') {
             X[x_p_x][x_p_y] = 0;
@@ -25,10 +25,8 @@ int move_up(void){
             delay(200);
         }
     }
-    return score1;
 }
-int move_down(void){
-    int score1 = 0;
+void move_down(void){
     if (X[x_p_x][x_p_y] == 1) {
         if (game_map[x_p_x + 1][x_p_y] == ' ') {
             X[x_p_x][x_p_y] = 0;
@@ -49,10 +47,8 @@ int move_down(void){
             delay(200);
         }
     }
-    return score1;
 }
-int move_right(void) {
-    int score1 = 0;
+void move_right(void) {
     if (X[x_p_x][x_p_y] == 1) {
         if (game_map[x_p_x][x_p_y+1] == ' ') {
             X[x_p_x][x_p_y] = 0;
@@ -73,10 +69,8 @@ int move_right(void) {
             delay(200);
         }
     }
-    return score1;
 }
-int move_left(void){
-    int score1 = 0;
+void move_left(void) {
     if(X[x_p_x][x_p_y] == 1) {
         if (game_map[x_p_x][x_p_y-1] == ' ') {
             X[x_p_x][x_p_y] = 0;
@@ -97,5 +91,4 @@ int move_left(void){
             delay(200);
         }
     }
-    return score1;
 }
