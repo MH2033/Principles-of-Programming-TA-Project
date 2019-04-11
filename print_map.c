@@ -5,9 +5,9 @@ extern char game_map[LEN][LEN];
 extern int score1, score2;
 extern double times;
 void print_map(void){
-    for (int i = 0; i <= x; i++) {
+    for (int i = 0; i < x; i++) {
         printf("\n");
-        for (int j = 0; j <= y; j++) {
+        for (int j = 0; j < y; j++) {
             printf("%c",game_map[i][j]);
         }
     }

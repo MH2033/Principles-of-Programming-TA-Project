@@ -5,8 +5,8 @@ extern char game_map[LEN][LEN];
 extern int y,x,game[LEN][LEN],TX[2],TY[2];
 void game_map_making(void){
     int i,j,k = 0,g = 0;
-    for (i = 0; i <= x; i++) {
-        for (j = 0; j <= y; j++) {
+    for (i = 0; i < x; i++) {
+        for (j = 0; j < y; j++) {
             if (game[i][j] == 1) {
                 game_map[i][j] = '.';
             } else if (game[i][j] == 9) {
