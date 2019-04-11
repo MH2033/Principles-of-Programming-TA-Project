@@ -3,7 +3,7 @@
 #include <conio.h>
 extern int score1,score2;
 extern double times;
-void win(void){
+void ShowWinner(void){
     system("CLS");
     printf("\n Player 1: %d\n Player 2: %d", score1, score2);
     if (score1 > score2)
