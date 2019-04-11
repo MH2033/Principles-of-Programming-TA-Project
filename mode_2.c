@@ -40,7 +40,7 @@ void mode_2(void) {
                 move_o = c1;
             }
         }
-        temp = FindPath(c2);
+        temp = FindCloseFood(c2);
         if(c2 != temp)
             c2 = temp;
         move_x = c2;

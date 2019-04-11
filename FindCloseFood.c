@@ -3,7 +3,7 @@
 #define LEN 100
 extern int x_p_x,x_p_y;
 extern int game[LEN][LEN];
-int FindPath(int c2) {
+int FindCloseFood(int c2) {
     int i, j, cdotx, cdoty, cbigdotx, cbigdoty, firstdot = 1, firstbigdot = 1;
     double dist1, dist2, weightdot, weightbigdot;
     for (i = x_p_x - 25; i < x_p_x + 25; i++) {
