@@ -10,9 +10,9 @@ extern char game_map[LEN][LEN];
 extern int game[LEN][LEN];
 extern double times;
 void mode_1(void) {
-    int c = 0, move_x = 0, move_o = 0;
-    for (int i = 0; i <= x; i++) {
-        for (int j = 0; j <= y; j++)
+    int c = 0, move_x = 0, move_o = 0, i, j;
+    for (i = 0; i <= x; i++) {
+        for (j = 0; j <= y; j++)
             if (i == 0 || j == 0 || i == x || j == y)
                 game[i][j] = 9;
     }
