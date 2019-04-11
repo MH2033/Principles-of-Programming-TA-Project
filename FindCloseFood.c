@@ -6,8 +6,8 @@ extern int game[LEN][LEN];
 int FindCloseFood(int c2) {
     int i, j, cdotx, cdoty, cbigdotx, cbigdoty, firstdot = 1, firstbigdot = 1;
     double dist1, dist2, weightdot, weightbigdot;
-    for (i = x_p_x - 25; i < x_p_x + 25; i++) {
-        for (j = x_p_y - 25; j < x_p_y + 25; j++) {
+    for (i = x_p_x - 40; i < x_p_x +40; i++) {
+        for (j = x_p_y - 40; j < x_p_y + 40; j++) {
             if (game[i][j] == 1) {
                 if (firstdot) {
                     cdotx = i;
@@ -26,14 +26,14 @@ int FindCloseFood(int c2) {
                     cbigdotx = i;
                     cbigdoty = j;
                     firstbigdot = 0;
-                } else {
+                } /*else {
                     dist1 = sqrt(pow((cbigdotx - x_p_x), 2) + pow((cbigdoty - x_p_y), 2));
                     dist2 = sqrt(pow((i - x_p_x), 2) + pow((j - x_p_y), 2));
                     if (dist2 < dist1) {
                         cbigdotx = i;
                         cbigdoty = j;
                     }
-                }
+                }*/
             }
 
         }
