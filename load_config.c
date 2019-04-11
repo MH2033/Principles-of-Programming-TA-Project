@@ -4,7 +4,7 @@ extern int x, y, dots;
 extern int game[LEN][LEN];
 extern double times;
 void load_config(const char config[]) {
-    int i, j = 0, lcount = 0, tempx = 0, tempy = 0;
+    int i, lcount = 0, tempx = 0, tempy = 0;
     x = 0;
     y = 0;
     times = 0;

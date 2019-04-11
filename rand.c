@@ -6,7 +6,7 @@
 extern int game[LEN][LEN],x,y;
 extern char game_map[LEN][LEN];
 void rand1(int n,int l){
-    int count,counter1 = 0,ran_x,ran_y;
+    int counter1 = 0,ran_x,ran_y;
     srand(time(NULL));
     while(counter1 < n){
         ran_x = rand() % x;
