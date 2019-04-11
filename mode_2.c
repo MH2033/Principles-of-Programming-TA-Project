@@ -10,10 +10,10 @@ extern char game_map[LEN][LEN];
 extern int game[LEN][LEN];
 extern double times;
 void mode_2(void) {
-    int c1 = 0, c2 = 0,move_x = 0, move_o = 0, i, j, temp;
-    for (i = 0; i <= x; i++) {
-        for (j = 0; j <= y; j++)
-            if (i == 0 || j == 0 || i == x || j == y)
+    int c1 = 0, c2 = 'i',move_x = 0, move_o = 0, i, j, temp;
+    for (i = 0; i < x; i++) {
+        for (j = 0; j < y; j++)
+            if (i == 0 || j == 0 || i == x-1 || j == y-1)
                 game[i][j] = 9;
     }
     system("CLS");
@@ -29,7 +29,11 @@ void mode_2(void) {
     system("CLS");
     game_map_making();
     print_map();
-    while (c1 != 'q' && times > 0) {
+    while (c1 != 'q') {
+        if(times <= 0){
+            win();
+            break;
+        }
         if (kbhit()) {
             c1 = getch();
             if (c1 == 'w' || c1 == 'a' || c1 == 's' || c1 == 'd') {
