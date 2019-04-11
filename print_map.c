@@ -1,10 +1,12 @@
 #include <stdio.h>
+#include "prototypes.h"
 #define LEN 100
 extern int x,y,game[LEN][LEN];
 extern char game_map[LEN][LEN];
 extern int score1, score2;
 extern double times;
 void print_map(void){
+    hidecursor();
     for (int i = 0; i < x; i++) {
         printf("\n");
         for (int j = 0; j < y; j++) {
@@ -15,4 +17,5 @@ void print_map(void){
     printf("\nPlayer 2 score: %d", score2);
     printf("\nRemaining time: %.2f", times);
     times = times - 0.2;
+    delay(150);
 }

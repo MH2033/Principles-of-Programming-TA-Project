@@ -31,5 +31,4 @@ void move(int move_x,int move_y) {
     }
     system("CLS");
     print_map();
-    delay(200);
 }

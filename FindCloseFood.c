@@ -8,25 +8,26 @@ int FindCloseFood(int c2) {
     double dist1, dist2, weightdot, weightbigdot;
     for (i = x_p_x - 40; i < x_p_x +40; i++) {
         for (j = x_p_y - 40; j < x_p_y + 40; j++) {
-            if (game[i][j] == 1) {
-                if (firstdot) {
-                    cdotx = i;
-                    cdoty = j;
-                    firstdot = 0;
-                } else {
-                    dist1 = sqrt(pow((cdotx - x_p_x), 2) + pow((cdoty - x_p_y), 2));
-                    dist2 = sqrt(pow((i - x_p_x), 2) + pow((j - x_p_y), 2));
-                    if (dist2 < dist1) {
+            if(i >0 && j > 0) {
+                if (game[i][j] == 1) {
+                    if (firstdot) {
                         cdotx = i;
                         cdoty = j;
+                        firstdot = 0;
+                    } else {
+                        dist1 = sqrt(pow((cdotx - x_p_x), 2) + pow((cdoty - x_p_y), 2));
+                        dist2 = sqrt(pow((i - x_p_x), 2) + pow((j - x_p_y), 2));
+                        if (dist2 < dist1) {
+                            cdotx = i;
+                            cdoty = j;
+                        }
                     }
-                }
-            } else if (game[i][j] == 5) {
-                if (firstbigdot) {
-                    cbigdotx = i;
-                    cbigdoty = j;
-                    firstbigdot = 0;
-                } /*else {
+                } else if (game[i][j] == 5) {
+                    if (firstbigdot) {
+                        cbigdotx = i;
+                        cbigdoty = j;
+                        firstbigdot = 0;
+                    } /*else {
                     dist1 = sqrt(pow((cbigdotx - x_p_x), 2) + pow((cbigdoty - x_p_y), 2));
                     dist2 = sqrt(pow((i - x_p_x), 2) + pow((j - x_p_y), 2));
                     if (dist2 < dist1) {
@@ -34,8 +35,8 @@ int FindCloseFood(int c2) {
                         cbigdoty = j;
                     }
                 }*/
+                }
             }
-
         }
     }
     weightdot = 1.0 / sqrt(pow((cdotx - x_p_x), 2) + pow((cdoty - x_p_y), 2));
