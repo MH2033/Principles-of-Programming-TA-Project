@@ -8,5 +8,5 @@ int welcome_screen(void)
 	if((mode = getchar()) == '1')
 		return 1;
 	else
-		return 2;
+		return 0;
 }

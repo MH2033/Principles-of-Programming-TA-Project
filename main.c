@@ -1,3 +1,6 @@
+
+/*NOTE: Compile with "-lm" flag or you'll get an error*/
+
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
@@ -17,7 +20,7 @@ int main() {
     hidecursor();
     if(ans)
         mode_1();
-//    else
-//        mode_2();
+    else
+        mode_2();
     return 0;
 }
