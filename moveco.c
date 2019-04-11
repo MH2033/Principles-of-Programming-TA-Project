@@ -7,12 +7,14 @@ int moveco(int i,int j) {
         if(game[x_p_x-1][x_p_y] == 0 || game[x_p_x-1][x_p_y] == 1 || game[x_p_x-1][x_p_y] == 5)
             c2 = 'i';
         else if((my = j - x_p_y) == 0 && (game[x_p_x][x_p_y -1] == 0 ||game[x_p_x][x_p_y -1] == 5 ||game[x_p_x][x_p_y -1] == 1)){
-            j--;
+            flagy = 1;
+            return 'j';
         }else if((my = j - x_p_y) <0){
             flagy = 1;
             return 'j';
         }else if((my = j - x_p_y) == 0 && (game[x_p_x][x_p_y +1] == 0 ||game[x_p_x][x_p_y +1] == 5 ||game[x_p_x][x_p_y +1] == 1)){
-            j++;
+            flagy = 1;
+            return 'l';
         }else if((my = j - x_p_y) >0){
             flagy = 1;
             return 'l';
@@ -25,12 +27,14 @@ int moveco(int i,int j) {
         if(game[x_p_x+1][x_p_y] == 0 || game[x_p_x+1][x_p_y] == 1 || game[x_p_x+1][x_p_y] == 5)
             c2 = 'k';
         else if((my = j - x_p_y) == 0 && (game[x_p_x][x_p_y -1] == 0 ||game[x_p_x][x_p_y -1] == 5 ||game[x_p_x][x_p_y -1] == 1)){
-            j--;
+            flagy = 1;
+            return 'j';
         }else if((my = j - x_p_y) <0){
             flagy = 1;
             return 'j';
         }else if((my = j - x_p_y) == 0 && (game[x_p_x][x_p_y + 1] == 0 ||game[x_p_x][x_p_y + 1] == 5 ||game[x_p_x][x_p_y+1] == 1) ){
-            j++;
+            flagy = 1;
+            return 'l';
         }
         else if((my = j - x_p_y) >0) {
             flagy = 1;
@@ -44,12 +48,14 @@ int moveco(int i,int j) {
         if(game[x_p_x][x_p_y-1] == 0 || game[x_p_x][x_p_y-1] == 1 || game[x_p_x][x_p_y-1] == 5)
             c2 ='j';
         else if((mx = i-x_p_x) == 0 && (game[x_p_x-1][x_p_y] == 0 ||game[x_p_x-1][x_p_y] == 5 ||game[x_p_x-1][x_p_y] == 1)){
-            i--;
+            flagx = 1;
+            return 'i';
         }else if((mx = i - x_p_x) < 0) {
             flagx = 1;
             return 'i';
         }else if((mx = i-x_p_x) == 0 && (game[x_p_x+1][x_p_y] == 0 ||game[x_p_x+1][x_p_y] == 5 ||game[x_p_x+1][x_p_y] == 1)){
-            i++;
+            flagx = 1;
+            return 'k';
         }else if((mx = i - x_p_x) > 0){
             flagx = 1;
             return 'k';
@@ -61,13 +67,15 @@ int moveco(int i,int j) {
         flagx = 0;
         if(game[x_p_x][x_p_y+1] == 0 || game[x_p_x][x_p_y+1] == 1 || game[x_p_x][x_p_y+1] == 5)
             c2 = 'l';
-        else if((mx = i-x_p_x) == 0 && (game[x_p_x-1][x_p_y] == 0 ||game[x_p_x-1][x_p_y] == 5 ||game[x_p_x-1][x_p_y] == 1)){
-            i--;
+        else if((mx = i-x_p_x) == 0 && (game[x_p_x-1][x_p_y] == 0 ||game[x_p_x-1][x_p_y] == 1||game[x_p_x-1][x_p_y] ==5)){
+            flagx = 1;
+            return 'i';
         }else if((mx = i-x_p_x) < 0) {
             flagx = 1;
             return 'i';
         }else if((mx = i-x_p_x) == 0 && (game[x_p_x+1][x_p_y] == 0 ||game[x_p_x+1][x_p_y] == 5 ||game[x_p_x+1][x_p_y] == 1)){
-            i++;
+            flagx = 1;
+            return 'k';
         }
         else if((mx = i - x_p_x) >0){
             flagx = 1;
