@@ -22,5 +22,6 @@ int main() {
         mode_1();
     else
         mode_2();
+    win();
     return 0;
 }
