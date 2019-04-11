@@ -20,5 +20,6 @@ void move_down(int x_p_x ,int x_p_y,int l,int score[],int i);
 void move_right(int x_p_x ,int x_p_y,int l,int score[],int i);
 void move_left(int x_p_x ,int x_p_y,int l,int score[],int i);
 void move(int move_o,int move_x);
+void win(void);
 
 #endif //P_O_P_G_PROJECT_PROTOTYPES_H

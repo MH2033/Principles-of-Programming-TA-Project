@@ -29,7 +29,11 @@ void mode_1(void) {
     system("CLS");
     game_map_making();
     print_map();
-    while (c != 'q' && times > 0) {
+    while (c != 'q' ) {
+        if(times <= 0) {
+            win();
+            break;
+        }
         if (kbhit()) {
             c = getch();
             if (c == 'w' || c == 'a' || c == 's' || c == 'd') {

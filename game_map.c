@@ -3,7 +3,6 @@
 extern int x_p_x,x_p_y,o_p_y,o_p_x,x,y;
 extern char game_map[LEN][LEN];
 extern int y,x,game[LEN][LEN],TX[2],TY[2];
-
 void game_map_making(void){
     int i,j,k = 0,g = 0;
     for (i = 0; i <= x; i++) {
