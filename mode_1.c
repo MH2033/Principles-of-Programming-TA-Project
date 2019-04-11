@@ -9,9 +9,9 @@ extern int dots,times,x,y,o_p_y,o_p_x,x_p_x,x_p_y,score[2],score1,score2;
 extern char game_map[LEN][LEN];
 extern int game[LEN][LEN];
 void mode_1(void) {
-    int c = 0, move_x = 0, move_o = 0, i, j;
-    for (i = 0; i <= x; i++) {
-        for (j = 0; j <= y; j++)
+    int c = 0, move_x = 0, move_o = 0;
+    for (int i = 0; i <= x; i++) {
+        for (int j = 0; j <= y; j++)
             if (i == 0 || j == 0 || i == x || j == y)
                 game[i][j] = 9;
     }
