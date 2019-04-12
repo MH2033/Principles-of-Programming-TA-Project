@@ -12,7 +12,7 @@ int main() {
     int ans;
     char config[LEN];
     ans = welcome_screen();
-    read_from_file(config, "test_case_1.txt");
+    read_from_file(config, "config_file.txt");
     load_config(config);
     hidecursor();
     if(ans)
