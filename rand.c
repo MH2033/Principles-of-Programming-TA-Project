@@ -11,8 +11,8 @@ void rand1(int n,int l){
     srand(randomness);
     randomness++;
     while(counter1 < n){
-        ran_x = (rand() % (x - 1)) + 1;
-        ran_y = (rand() % (y - 1)) + 1;
+        ran_x = (rand() % (x - 2)) + 1;
+        ran_y = (rand() % (y - 2)) + 1;
         if (game[ran_x][ran_y] == 0) {
             game[ran_x][ran_y] = l;
             counter1++;
