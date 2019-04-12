@@ -10,7 +10,7 @@ extern char game_map[LEN][LEN];
 extern int game[LEN][LEN];
 extern double times;
 void mode_2(void) {
-    int c1 = 0, c2 = 'i',move_x = 0, move_o = 0, i, j, temp;
+    int c1 = 0, c2,move_x = 0, move_o = 0, i, j;
     for (i = 0; i < x; i++) {
         for (j = 0; j < y; j++)
             if (i == 0 || j == 0 || i == x-1 || j == y-1)
