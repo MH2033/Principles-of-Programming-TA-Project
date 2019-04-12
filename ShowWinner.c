@@ -13,6 +13,5 @@ void ShowWinner(void){
     } else {
         printf("\n\n Player 2 has won!\n\n Press Enter to quit the game...");
     }
-    while(getch() != '\r')
-        ;
+    while(getch() != '\r');
 }
