@@ -14,7 +14,7 @@ void game_map_making(void);
 void rand1(int n,int l);//baray aval bazi k bayad rand ziadi bgirim
 void mode_1(void);
 void mode_2(void);
-int  FindCloseFood(int);
+int  FindCloseFood(void);
 void print_map(void);
 void move_up(int x_p_x ,int x_p_y,int l,int score[],int i);
 void move_down(int x_p_x ,int x_p_y,int l,int score[],int i);

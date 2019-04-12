@@ -36,9 +36,7 @@ void mode_2(void) {
                 move_o = c1;
             }
         }
-        temp = FindCloseFood(c2);
-        if(c2 != temp)
-            c2 = temp;
+        c2 = FindCloseFood();
         move_x = c2;
         move(move_o,move_x);
     }
