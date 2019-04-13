@@ -27,14 +27,7 @@ int FindCloseFood(void) {
                         cbigdotx = i;
                         cbigdoty = j;
                         firstbigdot = 0;
-                    } /*else {
-                    dist1 = sqrt(pow((cbigdotx - x_p_x), 2) + pow((cbigdoty - x_p_y), 2));
-                    dist2 = sqrt(pow((i - x_p_x), 2) + pow((j - x_p_y), 2));
-                    if (dist2 < dist1) {
-                        cbigdotx = i;
-                        cbigdoty = j;
                     }
-                }*/
                 }
             }
         }
