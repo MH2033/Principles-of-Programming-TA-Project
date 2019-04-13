@@ -12,10 +12,10 @@ char game_map[101][101];
 int main() {
     int ans;
     char config[LEN];
-    game[100][100] = '\0';
     ans = welcome_screen();
     read_from_file(config, "test_case_1.txt");
     load_config(config);
+    game_map[x][y] = '\0';
     hidecursor();
     if(ans)
         mode_1();
