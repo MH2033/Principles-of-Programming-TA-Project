@@ -6,7 +6,7 @@
 #include "prototypes.h"
 #define LEN 100
 extern int dots,x,y,o_p_y,o_p_x,x_p_x,x_p_y,score[2],score1,score2;
-extern char game_map[LEN][LEN];
+extern int game_map[LEN][LEN];
 extern int game[LEN][LEN];
 extern double times;
 void mode_2(void) {
