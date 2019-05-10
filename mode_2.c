@@ -17,7 +17,7 @@ void mode_2(void) {
                 game[i][j] = 9;
     }
     system("CLS");
-    printf(" Player 1: W(up), S(down), D(right), A(left)\n\n Q(quit the game)");
+    printf(" Moves: W(up), S(down), D(right), A(left)\n\n Q(quit the game)");
     printf(" \n\nPress any key to enter the game...");
     getch();
     system("CLS");

@@ -8,6 +8,8 @@ extern int x,y,game[LEN][LEN];
 extern int game_map[LEN][LEN];
 extern int score1, score2;
 extern double times;
+extern char *p1name, *p2name;
+extern int mode;
 void print_map(void){
     hidecursor();
     for (int i = 0; i < x; i++) {
@@ -16,8 +18,11 @@ void print_map(void){
             printf("%c",game_map[i][j]);
         }
     }
-    printf("\n\nPlayer 1 score: %d", score1);
-    printf("\nPlayer 2 score: %d", score2);
+    printf("\n\n%s score: %d", p1name, score1);
+    if(mode)
+        printf("\n%s score: %d", p2name, score2);
+    else
+        printf("\nComputer score: %d", score2);
     printf("\nRemaining time: %.2f", times);
     times = times - 0.2;
     delay(200);

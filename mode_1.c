@@ -8,6 +8,7 @@
 extern int dots,x,y,o_p_y,o_p_x,x_p_x,x_p_y,score[2],score1,score2;
 extern char game_map[LEN][LEN];
 extern int game[LEN][LEN];
+extern char *p1name, *p2name;
 extern double times;
 void mode_1(void) {
     int c = 0, move_x = 0, move_o = 0, i, j;
@@ -17,7 +18,7 @@ void mode_1(void) {
                 game[i][j] = 9;
     }
     system("CLS");
-    printf(" Player 1: W(up), S(down), D(right), A(left)\n\n Player 2: I(up), K(down), L(right), J(left)\n\n Q(quit the game)");
+    printf(" %s Buttons: W(up), S(down), D(right), A(left)\n\n %s Buttons: I(up), K(down), L(right), J(left)\n\n Q(quit the game)", p1name, p2name);
     printf(" \n\nPress any key to enter the game...");
     getch();
     system("CLS");
