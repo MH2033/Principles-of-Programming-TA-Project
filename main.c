@@ -20,6 +20,7 @@ int main() {
         mode_1();
     else
         mode_2();
+    save_scores();
     ShowWinner();
     return 0;
 }
