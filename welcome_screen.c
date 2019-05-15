@@ -14,13 +14,15 @@ int welcome_screen(void)
 	printf("\n\n Enter a number: ");
 	p1name = (char *)malloc(sizeof(char) * i);
 	if(getchar() == '1') {
-        printf("\n Enter Player 1 name:");
+        system("cls");
+        printf("\n Enter Player 1 name: ");
         getchar();//flushes '\n' from buffer
         while((c = getchar()) != '\n'){
             *(p1name + i - 1) = c;
             realloc(p1name, sizeof(char) * (i+1));
             i++;
         }
+        system("cls");
         *(p1name + i - 1) = 0;
         printf("\n Enter Player 2 name:");
         p2name = (char *)malloc(sizeof(char) * i);
@@ -34,6 +36,7 @@ int welcome_screen(void)
         return 1;
     }
 	else {
+        system("cls");
         printf("\n Enter Player 1 name:");
         getchar();//flushes '\n' from buffer
         while ((c = getchar()) != '\n') {
@@ -42,6 +45,7 @@ int welcome_screen(void)
             i++;
         }
         *(p1name + i - 1) = 0;
+        p2name = "Computer";
         if(strcmp(p1name, "Computer") == 0){
             flag = 1;
             while(flag) {

@@ -19,10 +19,7 @@ void print_map(void){
         }
     }
     printf("\n\n%s score: %d", p1name, score1);
-    if(mode)
-        printf("\n%s score: %d", p2name, score2);
-    else
-        printf("\nComputer score: %d", score2);
+    printf("\n%s score: %d", p2name, score2);
     printf("\nRemaining time: %.2f", times);
     times = times - 0.2;
     delay(200);
