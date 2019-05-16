@@ -28,7 +28,7 @@ void move(int move_x,int move_y) {
     } else if (move_y == 'l') {
         move_right(x_p_x, x_p_y, 3, score, 1);
         score2 = score[1];
-    }else if (move_y ==';');
+    }else if (move_y =='h');
     print_map();
     system("CLS");
 }

@@ -38,7 +38,7 @@ void mode_1(void) {
                 move_o = c;
                 continue;
             }
-            if (c == 'i' || c == 'k' || c == 'l' || c == 'j'|| c == ';') {
+            if (c == 'i' || c == 'k' || c == 'l' || c == 'j'|| c == 'h') {
                 move_x = c;
                 continue;
             }

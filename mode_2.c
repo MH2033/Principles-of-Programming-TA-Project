@@ -33,7 +33,7 @@ void mode_2(void) {
     while (c1 != 'q' && times > 0) {
         if (kbhit()) {
             c1 = getch();
-            if (c1 == 'w' || c1 == 'a' || c1 == 's' || c1 == 'd') {
+            if (c1 == 'w' || c1 == 'a' || c1 == 's' || c1 == 'd' || c1 == 'f') {
                 move_o = c1;
             }
         }
