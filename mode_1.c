@@ -30,14 +30,15 @@ void mode_1(void) {
     system("CLS");
     game_map_making();
     print_map();
+    system("CLS");
     while (c != 'q' && times > 0) {
         if (kbhit()) {
             c = getch();
-            if (c == 'w' || c == 'a' || c == 's' || c == 'd') {
+            if (c == 'w' || c == 'a' || c == 's' || c == 'd' || c == 'f') {
                 move_o = c;
                 continue;
             }
-            if (c == 'i' || c == 'k' || c == 'l' || c == 'j') {
+            if (c == 'i' || c == 'k' || c == 'l' || c == 'j'|| c == ';') {
                 move_x = c;
                 continue;
             }
