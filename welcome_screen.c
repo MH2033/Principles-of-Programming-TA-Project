@@ -33,6 +33,23 @@ int welcome_screen(void)
             i++;
         }
         *(p2name + i - 1) = 0;
+        if(strcmp(p2name, p1name) == 0) {
+            flag = 1;
+            while (flag) {
+                system("cls");
+                printf("\n This name is already taken try another one:");
+                i = 1;
+                p2name = (char *) malloc(sizeof(char) * i);
+                while ((c = getchar()) != '\n') {
+                    *(p2name + i - 1) = c;
+                    realloc(p2name, sizeof(char) * (i + 1));
+                    i++;
+                }
+                *(p2name + i - 1) = 0;
+                if (strcmp(p1name, p2name) != 0)
+                    flag = 0;
+            }
+        }
         return 1;
     }
 	else {
@@ -49,6 +66,7 @@ int welcome_screen(void)
         if(strcmp(p1name, "Computer") == 0){
             flag = 1;
             while(flag) {
+                system("cls");
                 printf("\n This name is reserved by computer try another one:");
                 i = 1;
                 p1name = (char *)malloc(sizeof(char) * i);
